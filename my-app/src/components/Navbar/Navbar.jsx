@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Icon } from '@iconify/react';
 import logo from '../Assets/ubestLogo.jpeg';
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
     const[menu, setMenu] = useState('shop');
@@ -14,14 +15,14 @@ export default function Navbar() {
             
         </div>
         <ul className="lg:flex md:flex hidden gap-3 sm:gap-5 cursor-pointer ">
-            <li onClick={()=>{setMenu('shop')}}>Shop{(menu==='shop')?<hr className="border-2 border-red-600"/>:<></>}</li>
-            <li onClick={()=>{setMenu('men')}}>Men{(menu==='men')?<hr className="border-2 border-red-600"/>:<></>}</li>
-            <li onClick={()=> {setMenu('women')}}>Women{(menu==='women')?<hr className="border-2 border-red-600"/>:<></>}</li>
-            <li onClick={()=> {setMenu('kids')}}>Kids{(menu==='kids')?<hr className="border-2 border-red-600"/>:<></>}</li>
+            <li onClick={()=>{setMenu('shop')}}><Link to='/'>Shop</Link>{(menu==='shop')?<hr className="border-2 border-red-600"/>:<></>}</li>
+            <li onClick={()=>{setMenu('men')}}><Link to='/men'>Men</Link>{(menu==='men')?<hr className="border-2 border-red-600"/>:<></>}</li>
+            <li onClick={()=> {setMenu('women')}}><Link to='/women'>Women</Link>{(menu==='women')?<hr className="border-2 border-red-600"/>:<></>}</li>
+            <li onClick={()=> {setMenu('kids')}}><Link to='/kids'>Kids</Link>{(menu==='kids')?<hr className="border-2 border-red-600"/>:<></>}</li>
         </ul>
          <div className="flex">
-            <button className="rounded-lg border-2 p-2 w-24 hover:bg-green-400">Login</button>
-            <Icon icon="bytesize:cart" width="49px" height="49px" style={{color: '#e01b24'}} />
+            <Link to='loginsignup'><button className="rounded-lg border-2 p-2 w-24 hover:bg-green-400">Login</button></Link>
+            <Link to='cart'><Icon icon="bytesize:cart" width="49px" height="49px" style={{color: '#e01b24'}} /></Link>
             <div className=" text-red-700">0</div>
          </div>
        </div>  
