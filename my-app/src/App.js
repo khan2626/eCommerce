@@ -12,17 +12,19 @@ function App() {
     <div>
       <BrowserRouter>
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Shop />} />
-          <Route path="/men" element={<ShopCategory category="men" />} />
-          <Route path="/women" element={<ShopCategory category="women" />} />
-          <Route path="/kids" element={<ShopCategory category="kids" />} />
-          <Route path="products" element={<Products />}>
-            <Route path=":productId" element={<Products />} />
-          </Route>
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/login" element={<LoginSignup />} />
-        </Routes>
+        <div className="container w-50 m-6 items-center">
+          <Routes>
+            <Route path="/" element={<Shop />} />
+            <Route path="/men" element={<ShopCategory category="men" />} />
+            <Route path="/women" element={<ShopCategory category="women" />} />
+            <Route path="/kids" element={<ShopCategory category="kids" />} />
+            <Route path="products" element={<Products />}>
+              <Route path=":productId" element={<Products />} />
+            </Route>
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/loginsignup" element={<LoginSignup />} />
+          </Routes>
+        </div>
       </BrowserRouter>
     </div>
   );
