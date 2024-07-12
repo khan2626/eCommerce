@@ -12,7 +12,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Navbar />
-        <div className="container w-50 m-6 items-center">
+        <div className="container w-50 m-6 px-11 items-center">
           <Routes>
             <Route path="/" element={<Shop />} />
             <Route path="/men" element={<ShopCategory category="men" />} />

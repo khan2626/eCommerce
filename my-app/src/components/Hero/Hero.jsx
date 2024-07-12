@@ -7,16 +7,16 @@ export default function Hero() {
         <>
         <div className="flex gap-20 justify-center ">
             <div className="">
-            <h2 className="text-xl font-semi-Sbold mb-2">NEW ARRIVALS ONLY</h2>
+            <h2 className="text-xs md:text-xl font-semi-Sbold mb-2">NEW ARRIVALS ONLY</h2>
  
                 <div className="">
                     <div className="flex">
-                    <p className="text-4xl font-bold ">new</p>
+                    <p className="text-sm md:text-4xl font-bold py-3">new</p>
                     <Icon icon="noto:waving-hand" width={50} />
                     </div>
-                    <p className="text-4xl font-bold  ">collections</p>
-                    <p className="text-4xl font-bold  ">for everyone</p>
-                    <button className=" flex rounded-lg border-2 p-2 w-48">Latest Collection<Icon icon="jam:arrow-right" width="25px" style={{color: "black"}} /></button>
+                    <p className="text-sm md:text-4xl font-bold  ">collections</p>
+                    <p className="text-sm md:text-4xl lg:text-4xl font-bold py-3 ">for everyone</p>
+                    <button className="bg-red-600 justify-center text-white flex gap-2 rounded-xl border-2 px-1 md:py-2 m:p-2 w-[90px] md:w-48 h-8 md:h-12 text-[8px] md:text-sm lg:text-base">Latest Collection<Icon icon="jam:arrow-right" width="25px" style={{color: "white"}} /></button>
                 
                 </div>
             </div>
