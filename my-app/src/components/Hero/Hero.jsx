@@ -5,7 +5,7 @@ import hero from '../Assets/suheyl-burak-p7I07kuPSyU-unsplash.jpg'
 export default function Hero() {
     return (
         <>
-        <div className="flex gap-10 sm:gap-20 justify-center ">
+        <div className="flex gap-7 sm:gap-20 justify-center ">
             <div className="">
             <h2 className="text-xs md:text-xl font-semi-Sbold mb-2">NEW ARRIVALS ONLY</h2>
  

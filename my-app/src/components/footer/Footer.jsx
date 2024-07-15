@@ -10,7 +10,7 @@ export default function Footers() {
                 <h1 className="font-bold font-poppins">UBest</h1>
                 <img src={ubestLogo} alt="logo" className="w-[75px] h-[50px] sm:w-[110px] sm:h[70]" />
             </div>
-            <ul className="flex gap-2 sm:gap-3 place-content-center">
+            <ul className="cursor-pointer flex gap-2 sm:gap-3 md:gap-5 lg:gap-8 place-content-center py-3">
                 <li>
                     <p>Products</p>
                 </li>
@@ -24,7 +24,7 @@ export default function Footers() {
                     <p>Contact</p>
                 </li>
             </ul>
-            <div className="flex gap-3 sm:gap-4 place-content-center"> 
+            <div className="flex gap-3 sm:gap-4 place-content-center cursor-pointer"> 
             <Icon icon="devicon:twitter" />
             <Icon icon="logos:whatsapp-icon" />
             <Icon icon="logos:facebook" />
