@@ -21,7 +21,7 @@ export default function Hero() {
                 </div>
             </div>
             <div className="">
-                    <img src={hero} alt="hero-image" className="w-[100px] sm:w-[200px] h-45 rounded-lg " />
+                    <img src={hero} alt="hero-image" className="w-[150px] sm:w-[200px] h-45 rounded-lg " />
                 </div>
         </div>
         </>

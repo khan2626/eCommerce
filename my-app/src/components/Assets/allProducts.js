@@ -8,6 +8,11 @@ import p7_img from "./m_DesertChuckerBoot.jpg";
 import p8_img from "./m_ZipUpCoat.jpg";
 import p9_img from "./m_Oxford.jpg";
 import p10_img from "./md-salman-tWOz2_EK5EQ-unsplash.jpg";
+import p11_img from "./Gildan_Sweatshirt.jpg";
+import p12_img from "./Rol_Cuf_Denim_Shortie.jpg";
+import p13_img from "./unisex.jpg";
+import p14_img from "./LinedFlannelJacket.jpg";
+import p15_img from "./Yuanlu_Boys.jpg";
 
 let allProduct = [
   {
@@ -77,8 +82,48 @@ let allProduct = [
   {
     id: 10,
     name: "round-neck T-shirts",
-    category: "kids",
+    category: "men",
     image: p10_img,
+    newPrice: 50.0,
+    oldPrice: 80.5,
+  },
+  {
+    id: 11,
+    name: "Gildan cotton Sweatshirt",
+    category: "kids",
+    image: p11_img,
+    newPrice: 50.0,
+    oldPrice: 80.5,
+  },
+  {
+    id: 12,
+    name: "Rol Cuf Denim shortie",
+    category: "kids",
+    image: p12_img,
+    newPrice: 39.0,
+    oldPrice: 70.0,
+  },
+  {
+    id: 13,
+    name: "Unisex cotton T-shirts",
+    category: "kids",
+    image: p13_img,
+    newPrice: 30.0,
+    oldPrice: 50.5,
+  },
+  {
+    id: 14,
+    name: "Lined flannel hoodie Jacket",
+    category: "kids",
+    image: p14_img,
+    newPrice: 40.0,
+    oldPrice: 80.5,
+  },
+  {
+    id: 15,
+    name: "Yuanlu Boys slim-fit suit",
+    category: "kids",
+    image: p15_img,
     newPrice: 50.0,
     oldPrice: 80.5,
   },
