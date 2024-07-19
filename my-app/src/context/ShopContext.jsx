@@ -1,10 +1,10 @@
 import React, { createContext } from "react";
 import allProducts from '../components/Assets/allProducts';
 
-export const shopContext = createContext(null)
+export const shopContext = createContext([])
 
-export default function shopContextProvider(props) {
-    contextValue = {allProducts}
+const ShopContextProvider = (props) => {
+    const contextValue = { allProducts }
 
     return (
         <shopContext.Provider value={contextValue}>
@@ -12,3 +12,5 @@ export default function shopContextProvider(props) {
         </shopContext.Provider>
     )
 }
+
+export default ShopContextProvider;

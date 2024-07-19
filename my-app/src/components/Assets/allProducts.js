@@ -11,10 +11,10 @@ import p10_img from "./md-salman-tWOz2_EK5EQ-unsplash.jpg";
 import p11_img from "./Gildan_Sweatshirt.jpg";
 import p12_img from "./Rol_Cuf_Denim_Shortie.jpg";
 import p13_img from "./unisex.jpg";
-import p14_img from "./LinedFlannelJacket.jpg";
+import p14_img from "./linedFlannelJacket.jpg";
 import p15_img from "./Yuanlu_Boys.jpg";
 
-let allProduct = [
+let allProducts = [
   {
     id: 1,
     name: "Lillusory exquisite gown",
@@ -128,3 +128,5 @@ let allProduct = [
     oldPrice: 80.5,
   },
 ];
+
+export default allProducts;

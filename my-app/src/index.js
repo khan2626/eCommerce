@@ -3,13 +3,13 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import shopContextProvider from "./context/ShopContext";
+import ShopContextProvider from "./context/ShopContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <shopContextProvider>
+  <ShopContextProvider>
     <App />
-  </shopContextProvider>
+  </ShopContextProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
