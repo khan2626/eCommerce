@@ -14,7 +14,7 @@ export default function ShopCategory(props) {
                 allProducts.map((item,i)=>{
                     if (props.category === item.category) {
                         return (
-                            <Items key={i} name={item.name} image={item.image} oldPrice={item.oldPrice} newPrice={item.newPrice} />
+                            <Items key={i} name={item.name} image={item.image} oldPrice={item.oldPrice} newPrice={item.newPrice} id={item.id}/>
                         );
                     }
                     else {return null;}
