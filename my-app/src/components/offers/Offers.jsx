@@ -12,7 +12,7 @@ export default function Offers() {
                 <button className="rounded-xl bg-red-600 text-white w-[150px] h-8">Check Now</button>        
             </div>
             <div className="">
-                <img src={shoe} alt="shoe" className="w-[250px]" />
+                <img src={shoe} alt="shoe" className="w-[250px] py-3" />
             </div>
         </div>
     )

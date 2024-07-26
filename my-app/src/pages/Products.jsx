@@ -2,6 +2,9 @@ import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { shopContext } from "../context/ShopContext";
 import ProductDisplay from "../components/productDisplay/ProductDisplay";
+import Breadcrum from "../components/breadcrum/Breadcrum";
+import Description from "../components/description/Description";
+import RelatedProducts from "../components/relatedProducts/RelatedProducts.";
 
 
 export default function Products() {
@@ -16,8 +19,10 @@ export default function Products() {
 
     return (
         <div>
+            <Breadcrum product={product}/>
             <ProductDisplay product={product}/>
-            
+            <Description />
+            <RelatedProducts/>
         </div>
     )
 }

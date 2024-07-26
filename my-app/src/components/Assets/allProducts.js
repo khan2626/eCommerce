@@ -1,4 +1,3 @@
-import p1_img from "./suheyl-burak-p7I07kuPSyU-unsplash.jpg";
 import p2_img from "./Lillusory.jpg";
 import p3_img from "./prettyGarden.jpg";
 import p4_img from "./Villiamcep.jpg";
