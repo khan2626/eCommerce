@@ -30,4 +30,31 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.get("/", async (req, res) => {
+  try {
+    let products = await Products.find({});
+    res.status(201).json({ success: true, products });
+    console.log(products);
+  } catch (error) {
+    res.status(500).json({ success: false, error });
+  }
+});
+
+router.delete("/:id", async (req, res) => {
+  try {
+    const productId = req.params.id;
+    const product = await Products.findOneAndDelete({ id: productId });
+
+    if (!product) {
+      return res
+        .status(400)
+        .json({ success: false, message: "product not found" });
+    }
+    res.status(200).json({ success: true, message: `${product.name} deleted` });
+    console.log("product deleted successfully");
+  } catch (error) {
+    res.status(500).json({ success: false, error });
+  }
+});
+
 module.exports = router;
