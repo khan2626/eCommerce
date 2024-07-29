@@ -2,6 +2,7 @@ const express = require("express");
 const { connectDB } = require("./utils/db");
 const Products = require("./models/product");
 const productRoute = require("./routes/productRoute");
+const imageRoute = require("./routes/imageRoute");
 //const cors = require("cors");
 
 const app = express();
