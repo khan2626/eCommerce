@@ -34,7 +34,7 @@ router.get("/", async (req, res) => {
   try {
     let products = await Products.find({});
     res.status(201).json({ success: true, products });
-    console.log(products);
+    console.log(`${products.length} products retrieved`);
   } catch (error) {
     res.status(500).json({ success: false, error });
   }

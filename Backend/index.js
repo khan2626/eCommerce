@@ -11,9 +11,9 @@ PORT = process.env.PORT || 5000;
 connectDB().then(() => {
   app.use(express.json());
   app.use("/images", express.static("./uploads/images"));
-  app.use("/addProducts", productRoute);
+  app.use("/products", productRoute);
   app.use("/uploads", imageRoute);
-  app.use("/deleteProduct", productRoute);
+
   //   app.use(cors(corsOptions));
   app.listen(PORT, () => {
     try {
