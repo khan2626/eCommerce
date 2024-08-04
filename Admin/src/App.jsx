@@ -3,15 +3,25 @@ import Sidebar from "./components/sidebar/sidebar"
 import { Route, Routes } from "react-router-dom"
 import Navbar from "./components/navbar/Navbar"
 
+import ListProducts from "./components/listProduct/ListProduct"
+import AddProducts from "./components/addProduct/AddProduct"
+
+
 function App() {
   
   return (
    <div className="font-poppins">
     <Navbar />
+    <div className="flex gap-2 w-auto container">
     <Sidebar />
-    {/* Admin Panel
-    <ion-icon name="cloud-upload-outline" style={{fontSize: '60px'}}></ion-icon>
-    <ion-icon name="albums-outline"></ion-icon> */}
+
+    <Routes className='flex-grow'>
+      <Route path='/listProduct' element={<ListProducts/>} />
+      <Route path='/addProduct' element={<AddProducts/>} />
+    </Routes>
+    </div>
+    
+
    </div>
   )
 }
