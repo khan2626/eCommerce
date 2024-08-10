@@ -4,10 +4,10 @@ const { Schema } = mongoose;
 const productSchema = new Schema({
   id: { type: Number },
   name: { type: String },
-  image: { type: String },
-  category: { type: String },
   oldPrice: { type: Number },
   newPrice: { type: Number },
+  category: { type: String },
+  image: { type: String },
   createdAt: { type: Date, default: Date.now },
 });
 
