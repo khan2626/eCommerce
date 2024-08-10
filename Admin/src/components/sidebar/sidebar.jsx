@@ -12,11 +12,6 @@ export default function Sidebar() {
                 <ion-icon name="bag-add-outline" style={{ fontSize: '60px' }}  ></ion-icon>
             </div>
             </Link>
-            
-            {/* <div className="text-center py-3 cursor-pointer">
-                <p>Delete Product</p>
-                <ion-icon name="trash-outline" style={{ fontSize: '60px' }} ></ion-icon>
-            </div> */}
             <Link to={'/listProduct'}>
             <div className="text-center mt-7 cursor-pointer">
                 <p>List Products</p>

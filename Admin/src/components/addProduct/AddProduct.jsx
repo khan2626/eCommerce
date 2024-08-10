@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import axios from 'axios';
 
 export default function AddProducts() {
+
+  // const imageRef = useRef('')
 
     const [image, setImage] = useState(false)
     const [product, setProduct] = useState({
@@ -11,6 +13,7 @@ export default function AddProducts() {
         category: "Women",
         image: ""
     });
+    
 
     const changeHandler = (e) => {
         setProduct({...product, [e.target.name]: e.target.value})
@@ -47,6 +50,15 @@ export default function AddProducts() {
             if(response.data.success){
                 console.log(response.data)
                 alert(`${product.name} uploaded`)
+                setProduct({
+                  name: "",
+                  oldPrice: "",
+                  newPrice: "",
+                  category: "Women",
+                  image: "",
+                })
+                setImage(null)
+
             } else {
                 alert('failed to upload product')
             }
@@ -59,8 +71,8 @@ export default function AddProducts() {
     
 
   return (
-    <div className="max-w-lg  mt-2 mx-auto p-6 bg-white shadow-md rounded-lg">
-      <h2 className="text-2xl font-semibold mb-6">Add Product</h2>
+    <div className="max-w-lg  mt-2 mx-auto p-6 bg-gray-300 shadow-md rounded-lg">
+      <h2 className="text-2xl font-semibold text-center mb-6">Add Product</h2>
       
       <div className="mb-4">
         <label className="block text-gray-700 font-medium mb-2">Product Name</label>
@@ -75,7 +87,7 @@ export default function AddProducts() {
       </div>
       <div className="flex gap-2">
       <div className="mb-4">
-        <label className="block text-gray-700 font-medium mb-2">Old Price</label>
+        <label className="block text-gray-700 font-medium mb-2">Old Price(optional)</label>
         <input 
           name='oldPrice'
           type="text"
@@ -87,7 +99,7 @@ export default function AddProducts() {
       </div>
       
       <div className="mb-4">
-        <label className="block text-gray-700 font-medium mb-2">New Price</label>
+        <label className="block text-gray-700 font-medium mb-2">New Price/Offer Price</label>
         <input
           name='newPrice'
           type="text"
@@ -116,13 +128,13 @@ export default function AddProducts() {
       
       <div className="mb-6">
         
-        <div className="flex items-center justify-center w-[130px] h-32 border-2 border-dashed border-gray-300 rounded-md cursor-pointer hover:border-blue-500 focus-within:border-blue-500 focus-within:ring focus-within:ring-blue-500">
+        <div className="flex items-center justify-center w-[130px] h-32 border-2 border-dashed border-white rounded-md cursor-pointer hover:border-blue-500 focus-within:border-blue-500 focus-within:ring focus-within:ring-blue-500">
             
         <label htmlFor="image-upload" className="block text-gray-700 font-medium mb-2">
-            {image?<img src={URL.createObjectURL(image)} className="object-cover "></img>:<ion-icon name="cloud-upload-outline" style={{ fontSize: '60px' }} ></ion-icon>}
+            {image?<img src={URL.createObjectURL(image)} className="object-cover "></img>:<ion-icon name="cloud-upload-outline" style={{ fontSize: '80px' }} ></ion-icon>}
         </label>
           
-          <input onChange={imageHandler} type="file" name="image" id="image-upload" hidden />
+          <input  onChange={imageHandler} type="file" name="image" id="image-upload" hidden />
         </div>
       </div>
       
