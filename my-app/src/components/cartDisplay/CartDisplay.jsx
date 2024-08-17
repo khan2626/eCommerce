@@ -22,7 +22,7 @@ export default function CartDisplay() {
                     return (
                         <div>
                         <div className="flex justify-between">
-                <img className="w-10 h-10" src={product.image} alt="" />
+                <img className="w-10 h-10 object-contain" src={product.image} alt="" />
                 <p className="w-12">{product.name}</p>
                 <p>${product.newPrice} </p>
                 <p>{cartItems[product.id]} </p>

@@ -1,8 +1,28 @@
-import React from "react";
-import newCollections from "../Assets/newCollections";
+import React, { useEffect, useState } from "react";
 import Items from "../Items/Items";
+import axios from 'axios';
 
  export default function NewCollections() {
+
+    const [newCollections, setNewCollections] = useState([]);
+
+    const getNewCollections = async () => {
+        const resp = await axios.get('http://localhost:5000/others/newCollection',{
+            headers: {
+                Accept: 'application/json',
+                "Content-Type": 'application/json'
+                
+            }
+        })
+        if (resp.data.success) {
+            setNewCollections(resp.data.newCollection)
+        }
+    }
+
+    useEffect(()=>{
+        getNewCollections()
+    },[])
+
     return (
         <div className="mb-10">
             <div>

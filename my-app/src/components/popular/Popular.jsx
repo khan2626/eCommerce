@@ -1,9 +1,29 @@
-import React from "react";
-import womenPopular from '../Assets/womenPopular';
+import React, { useState, useEffect } from "react";
 import Items from "../Items/Items";
+import axios from "axios";
 
 
 export default function Shop() {
+
+    const [womenPopular, setWomenPopular] = useState([]);
+
+    const getWomenPopular = async () => {
+        const resp = await axios.get('http://localhost:5000/others/womenPopular',{
+            headers: {
+                Accept: 'application/json',
+                "Content-Type": 'application/json'
+                
+            }
+        })
+        if (resp.data.success) {
+            setWomenPopular(resp.data.womenPopular)
+        }
+    }
+
+    useEffect(()=>{
+        getWomenPopular()
+    },[])
+
     return (
         <div>
             <h1 className="text-center font-bold text-2xl">POPULAR IN WOMEN</h1>
