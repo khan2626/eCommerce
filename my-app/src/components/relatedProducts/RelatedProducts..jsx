@@ -1,5 +1,7 @@
 import React from "react";
 import Items from "../Items/Items";
+import { useEffect, useState } from "react";
+import axios from 'axios'
 
 
 export default function RelatedProducts() {
