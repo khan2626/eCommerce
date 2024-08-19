@@ -20,7 +20,7 @@ router.post("/", upload.single("image"), (req, res) => {
   try {
     res.status(201).json({
       success: "true",
-      imageUrl: `http://localhost:5000/images/${req.file.filename}`,
+      imageUrl: `https://ubestclothing.onrender.com/images/${req.file.filename}`,
     });
   } catch (error) {
     res.status(500).json({ success: "false", error });
