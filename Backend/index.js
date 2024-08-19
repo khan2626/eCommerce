@@ -11,7 +11,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-const PORT = 5000 || process.env.PORT;
+const PORT = process.env.PORT || 5000;
 const corsOptions = {
   origin: "*",
   optionsSuccessStatus: 200,
@@ -31,7 +31,7 @@ connectDB().then(() => {
   //   app.use(cors(corsOptions));
   app.listen(PORT, () => {
     try {
-      console.log(`server running on port ${PORT}`, (Debug = true));
+      console.log(`server running on port ${PORT}`);
     } catch (error) {
       console.log(error.message);
     }

@@ -57,7 +57,6 @@ const ShopContextProvider = (props) => {
                     }
                 })
                 setCartItems(resp.data.userCartData)
-                console.log(cartItems)
             }
            
         } catch(error) {
