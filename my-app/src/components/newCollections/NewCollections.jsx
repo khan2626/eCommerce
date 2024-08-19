@@ -7,7 +7,7 @@ import axios from 'axios';
     const [newCollections, setNewCollections] = useState([]);
 
     const getNewCollections = async () => {
-        const resp = await axios.get('http://localhost:5000/others/newCollection',{
+        const resp = await axios.get('https://ubestclothing.onrender.com/others/newCollection',{
             headers: {
                 Accept: 'application/json',
                 "Content-Type": 'application/json'

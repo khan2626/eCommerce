@@ -8,7 +8,7 @@ export default function Shop() {
     const [womenPopular, setWomenPopular] = useState([]);
 
     const getWomenPopular = async () => {
-        const resp = await axios.get('http://localhost:5000/others/womenPopular',{
+        const resp = await axios.get('https://ubestclothing.onrender.com/others/womenPopular',{
             headers: {
                 Accept: 'application/json',
                 "Content-Type": 'application/json'
