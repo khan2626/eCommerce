@@ -29,7 +29,7 @@ const ShopContextProvider = (props) => {
 
     const getAllProducts = async ()=>{
         try{
-            const resp = await axios.get('http://localhost:5000/products',{
+            const resp = await axios.get('https://ubestclothing.onrender.com/products',{
                 headers: {
                     Accept: 'application/json',
                     "Content-Type": 'application/json'
@@ -49,7 +49,7 @@ const ShopContextProvider = (props) => {
     const getCartData = async ()=>{
         try{
             if(localStorage.getItem('token')){
-                const resp = await axios.get('http://localhost:5000/cart/getCartData',{
+                const resp = await axios.get('https://ubestclothing.onrender.com/cart/getCartData',{
                     headers: {
                         Accept: 'application/json',
                         "Content-Type": 'application/json',
@@ -68,7 +68,7 @@ const ShopContextProvider = (props) => {
         setCartItems((prev)=>({...prev, [itemId]:prev[itemId]+1}))
         if (localStorage.getItem('token')) {
             const addCartItemToServer = async () => {
-                await axios.post('http://localhost:5000/cart/addCartData',{'itemId': itemId}, {
+                await axios.post('https://ubestclothing.onrender.com/cart/addCartData',{'itemId': itemId}, {
                     headers: {
                         Accept: 'application/json',
                         "Content-Type": 'application/json',
@@ -88,7 +88,7 @@ const ShopContextProvider = (props) => {
 
         if (localStorage.getItem('token')) {
             const removeCartItemFromServer = async () => {
-                await axios.post('http://localhost:5000/cart/removeCartData',{'itemId': itemId}, {
+                await axios.post('https://ubestclothing.onrender.com/cart/removeCartData',{'itemId': itemId}, {
                     headers: {
                         Accept: 'application/json',
                         "Content-Type": 'application/json',
