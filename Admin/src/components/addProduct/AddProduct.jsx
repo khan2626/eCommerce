@@ -10,7 +10,7 @@ export default function AddProducts() {
         name: "",
         oldPrice: "",
         newPrice: "",
-        category: "Women",
+        category: "women",
         image: ""
     });
     
@@ -28,7 +28,7 @@ export default function AddProducts() {
         const formData = new FormData()
         formData.append('image', image)
         try {
-            const resp = await axios.post('http://localhost:5000/uploads',formData,{
+            const resp = await axios.post('https://ubestclothing.onrender.com/uploads',formData,{
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
@@ -41,7 +41,7 @@ export default function AddProducts() {
                 alert('failed to upload image')
             }
             
-            const response = await axios.post('http://localhost:5000/products',product,{
+            const response = await axios.post('https://ubestclothing.onrender.com/products',product,{
                 headers: {
                     'Content-Type': 'Application/json',
                     Accept: 'Application/json'
@@ -54,7 +54,7 @@ export default function AddProducts() {
                   name: "",
                   oldPrice: "",
                   newPrice: "",
-                  category: "Women",
+                  category: "women",
                   image: "",
                 })
                 setImage(null)
