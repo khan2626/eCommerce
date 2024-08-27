@@ -41,34 +41,77 @@ export default function LoginSignup() {
     }
    }
 
-   const signup = async () => {
+//    const signup = async () => {
+//     try {
+//         const resp = await axios.post('https://ubestclothing.onrender.com/user/signup',formData,{
+//             headers: {
+//                 Accept: 'application/json',
+//                 'Content-Type': 'application/json'
+//             }
+//         })
+//         if (resp.data.success){
+//             localStorage.setItem('token', resp.data.token)
+//             setFormData({
+//                 name: '',
+//                 email: '',
+//                 password: ''
+//             })
+//             console.log("user registered")
+//             alert('registration successful')
+//             window.location.replace('/')
+//         } else {
+//             alert(resp.data.errors)
+//             console.log(resp.data.errors)
+//         }
+        
+//     } catch(error) {
+//         console.error(error)
+//         alert(error)
+//     }
+//    }
+
+const signup = async () => {
     try {
-        const resp = await axios.post('https://ubestclothing.onrender.com/user/signup',formData,{
+        const resp = await axios.post('https://ubestclothing.onrender.com/user/signup', formData, {
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json'
             }
-        })
-        if (resp.data.success){
-            localStorage.setItem('token', resp.data.token)
+        });
+        
+        if (resp.data.success) {
+            localStorage.setItem('token', resp.data.token);
             setFormData({
                 name: '',
                 email: '',
                 password: ''
-            })
-            console.log("user registered")
-            alert('registration successful')
-            window.location.replace('/')
+            });
+            console.log("User registered");
+            alert('Registration successful');
+            window.location.replace('/');
         } else {
-            alert(resp.data.errors)
-            console.log(resp.data.errors)
+            alert(resp.data.errors);
+            console.log(resp.data.errors);
         }
-        
-    } catch(error) {
-        console.error(error)
-        alert(error)
+
+    } catch (error) {
+        // Detailed error logging
+        if (error.response) {
+            // The request was made and the server responded with a status code outside the range of 2xx
+            console.error('Server responded with an error:', error.response.data);
+            alert('Server error: ' + error.response.data.errors);
+        } else if (error.request) {
+            // The request was made but no response was received
+            console.error('No response received:', error.request);
+            alert('No response from server');
+        } else {
+            // Something else happened while setting up the request
+            console.error('Error during request setup:', error.message);
+            alert('Error: ' + error.message);
+        }
     }
-   }
+};
+
 
     return (
         <div className="max-w-lg mt-2 mx-auto text-center p-6 bg-gray-300 shadow-md rounded-lg">
