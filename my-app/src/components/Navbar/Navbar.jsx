@@ -25,7 +25,7 @@ export default function Navbar() {
         </ul>
         </div>
          <div className="flex">
-            {localStorage.getItem('token')?<button onClick={()=>{localStorage.removeItem('token');window.location.replace('/')}} className="rounded-lg border-2 p-2 w-12 sm:w-20 md:w-24 hover:bg-red-400 text-xs sm:text-sm text-center">Logout</button>
+            {localStorage.getItem('token')?<button onClick={()=>{localStorage.removeItem('token');window.location.replace('/')}} className="rounded-lg border-2 p-2 w-14 sm:w-20 md:w-24 hover:bg-red-400 text-xs sm:text-sm text-center">Logout</button>
             :<Link to='loginsignup'><button className="rounded-lg border-2 p-2 w-12 sm:w-20 md:w-24 hover:bg-blue-400 text-xs sm:text-sm text-center">Login</button></Link>}
             <Link to='cart'><Icon icon="bytesize:cart" width="auto" height="auto" style={{color: '#e01b24'}} /></Link>
             <div className="mb-4 pb-3 sm:pb-0 sm:mb-0 text-red-700">{cartQty()}</div>

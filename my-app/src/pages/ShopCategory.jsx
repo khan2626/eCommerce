@@ -7,7 +7,7 @@ export default function ShopCategory(props) {
     return (
         <div className="">
             <div className="flex place-content-center ">
-                <img src={props.banner} alt="banner" className="w-[650px] h-[210px] mb-1  " />
+                <img src={props.banner} alt="banner" className="w-[650px] h-[210px] mb-1 object-contain" />
             </div>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
                 {allProducts && allProducts.length > 0 ? 
@@ -19,7 +19,7 @@ export default function ShopCategory(props) {
                     }
                     else {return null;}
                 })
-            : <p>products unavailable</p>}
+            : <progress>products loading.....</progress>}
             </div>
             <div className="flex place-content-center">
                 <button className="rounded-full border-2 w-32 bg-red-600 ">Explore More</button>
