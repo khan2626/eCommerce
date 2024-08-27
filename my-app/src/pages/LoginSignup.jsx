@@ -3,11 +3,11 @@ import axios from 'axios';
 
 export default function LoginSignup() {
 
-    const [state, setState] = useState("Login")
+    const [state, setState] = useState("Sign up")
     const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        password: ''
+        name: "",
+        email: "",
+        password: ""
     })
     
    const changeHandler = (e)=>{
@@ -17,7 +17,7 @@ export default function LoginSignup() {
    const login = async ()=>{
     
     try {
-        const resp = await axios.post('http://localhost:5000/user/login',formData,{
+        const resp = await axios.post('https://ubestclothing.onrender.com/user/login',formData,{
             headers: {
                 Accept: 'application/json',
                 "Content-Type": 'application/json'
@@ -37,13 +37,13 @@ export default function LoginSignup() {
        
     } catch(errors){
         console.error(errors)
-        alert("Invalid Email or Password")
+        //alert("Invalid Email or Password")
     }
    }
 
    const signup = async () => {
     try {
-        const resp = await axios.post('http://localhost:5000/user/signup',formData,{
+        const resp = await axios.post('https://ubestclothing.onrender.com/user/signup',formData,{
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json'
@@ -61,6 +61,7 @@ export default function LoginSignup() {
             window.location.replace('/')
         } else {
             alert(resp.data.errors)
+            console.log(resp.data.errors)
         }
         
     } catch(error) {
