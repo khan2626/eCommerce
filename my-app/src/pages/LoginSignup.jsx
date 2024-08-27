@@ -37,7 +37,7 @@ export default function LoginSignup() {
        
     } catch(errors){
         console.error(errors)
-        //alert("Invalid Email or Password")
+        alert("Invalid Email or Password")
     }
    }
 
