@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export default function LoginSignup() {
 
-    const [state, setState] = useState("Sign up")
+    const [state, setState] = useState("Login")
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -35,9 +35,17 @@ export default function LoginSignup() {
             console.log(resp.data.errors)
         }
        
-    } catch(errors){
-        console.error(errors)
-        alert("Invalid Email or Password")
+    } catch(error){
+        if (error.response) {
+            console.error('server error:', error.response.data)
+            alert(error.response.data.errors || 'Login Failed')
+        }
+        else if (error.request) {
+            console.error('no response from server:', error.request)
+        }
+        else {
+            console.error('Error during setup: ', error.message)
+        }
     }
    }
 
