@@ -16,7 +16,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Navbar />
-        <div className="container w-auto  m-6 px-11 items-center">
+        <div className="container mx-auto items-center sm:mx-2 md:mx-6 lg:mx-8 xl:mx-10 px-2 md:px-6 lg:px-8 xl:px-10">
           <Routes>
             <Route path="/" element={<Shop />} />
             <Route
