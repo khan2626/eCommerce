@@ -30,7 +30,7 @@ import axios from 'axios';
                 <hr />
             </div>
 
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
+            <div className="grid sm:grid-cols-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
                 {newCollections.map((item, i) => {
                     return <Items key={i} name={item.name} image={item.image} oldPrice={item.oldPrice} newPrice={item.newPrice} id={item.id}/>
                 })}

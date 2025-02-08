@@ -9,7 +9,7 @@ export default function ShopCategory(props) {
             <div className="flex place-content-center ">
                 <img src={props.banner} alt="banner" className="w-[650px] h-[210px] mb-1 object-contain" />
             </div>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div className="grid sm:grid-cols-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-2">
                 {allProducts && allProducts.length > 0 ? 
                 allProducts.map((item,i)=>{
                     if (props.category === item.category) {

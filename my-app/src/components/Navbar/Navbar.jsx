@@ -17,7 +17,7 @@ export default function Navbar() {
             
         </div>
         <div className="nav-links absolute md:static  min-h-[60vh] md:min-h-fit left-0 top-[-100%] w-full md:w-fit items-center py-4 sm:py-3">
-        <ul className="flex bg-white sm:bg-white md:flex-row flex-col gap-5 md:gap-8 px-3 py-3 text-xl justify-between">
+        <ul className="flex bg-white sm:bg-white md:flex-row flex-col gap-5 md:gap-8 px-5 py-3 text-xl justify-between">
             <li onClick={()=>{setMenu('shop')}}><Link to='/'>Shop</Link>{(menu==='shop')?<hr className="border-2 border-red-600 w-12"/>:<></>}</li>
             <li onClick={()=>{setMenu('men')}}><Link to='/men'>Men</Link>{(menu==='men')?<hr className="border-2 border-red-600 w-12 "/>:<></>}</li>
             <li onClick={()=> {setMenu('women')}}><Link to='/women'>Women</Link>{(menu==='women')?<hr className="border-2 border-red-600 w-12"/>:<></>}</li>

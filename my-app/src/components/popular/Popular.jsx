@@ -26,9 +26,9 @@ export default function Shop() {
 
     return (
         <div>
-            <h1 className="text-center font-bold text-2xl">POPULAR IN WOMEN</h1>
+            <h1 className="text-center py-3 font-bold text-2xl md:text-3xl lg:text:4xl">POPULAR IN WOMEN</h1>
             <hr />
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-cols-1 items-center justify-between">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-cols-2 items-center justify-between text-wrap">
                 {womenPopular.map((item, i) => {
                     return <Items key={i} name={item.name} image={item.image} oldPrice={item.oldPrice} newPrice={item.newPrice} id={item.id}/>
                 })}
