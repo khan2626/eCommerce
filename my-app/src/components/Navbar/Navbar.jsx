@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { shopContext } from "../../context/ShopContext";
 
 export default function Navbar() {
-    const[menu, setMenu] = useState('shop');
+    const[menu, setMenu] = useState('');
     const { cartQty } = useContext(shopContext)
 
     return (
