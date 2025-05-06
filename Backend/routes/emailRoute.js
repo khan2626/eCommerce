@@ -11,7 +11,6 @@ router.post("/subscribe", async (req, res) => {
     console.log("email required");
     return res.status(400).json({ error: "Email is required" });
   }
-  console.log(email);
 
   try {
     // Create transporter using your email provider
@@ -28,7 +27,7 @@ router.post("/subscribe", async (req, res) => {
       from: process.env.EMAIL_USER,
       to: email,
       subject: "Thank you for subscribing!",
-      text: "You've successfully subscribed to UBestClothings. Stay tuned for exclusive updates!",
+      text: "You've successfully subscribed to UBestClothings newsletter. Stay tuned for exclusive updates!",
     };
 
     // Send email
