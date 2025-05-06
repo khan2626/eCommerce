@@ -6,6 +6,7 @@ const imageRoute = require("./routes/imageRoute");
 const userRoute = require("./routes/userRoute");
 const othersRoute = require("./routes/othersRoute");
 const cartRoute = require("./routes/cartRoute");
+const emailRoute = require("./routes/emailRoute");
 
 const cors = require("cors");
 require("dotenv").config();
@@ -27,6 +28,7 @@ connectDB().then(() => {
   app.use("/user", userRoute);
   app.use("/others", othersRoute);
   app.use("/cart", cartRoute);
+  app.use("/email", emailRoute);
 
   //   app.use(cors(corsOptions));
   app.listen(PORT, () => {
