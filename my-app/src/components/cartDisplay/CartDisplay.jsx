@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { shopContext } from "../../context/ShopContext";
+import { Button } from "react-daisyui";
 
 export default function CartDisplay() {
 
@@ -42,7 +43,7 @@ export default function CartDisplay() {
                 <p>${cartTotalAmount()}</p>
             </div>
             <hr />
-            <button className="border-2 bg-red-600">Submit</button>
+            <Button className="border-2 bg-red-600">Submit</Button>
             </div>
            
             
